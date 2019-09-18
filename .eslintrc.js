@@ -25,6 +25,7 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'react/state-in-constructor': 'off',
     'react/static-property-placement': 'off',
+    'react/jsx-props-no-spreading': 'warn',
 
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',

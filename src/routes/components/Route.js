@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
 
-import { AuthLayout, DefaultLayout } from '../../pages/_layouts';
+import { AuthLayout, DefaultLayout } from '~/pages/_layouts';
 
 function RouteWrapper({ component: Component, isPrivate, ...rest }) {
   const isAuthenticated = false;

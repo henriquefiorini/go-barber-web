@@ -3,7 +3,7 @@ import { Switch } from 'react-router-dom';
 
 import Route from './components/Route';
 
-import { SignIn, SignUp, Dashboard, Profile } from '../pages';
+import { SignIn, SignUp, Dashboard, Profile } from '~/pages';
 
 export default function Routes() {
   return (

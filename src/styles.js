@@ -31,6 +31,7 @@ export default createGlobalStyle`
   }
 
   a {
+    color: #3b9eff;
     line-height: inherit;
     text-decoration: none;
     cursor: pointer;

@@ -8,18 +8,18 @@ const Button = styled.button`
   height: 40px;
   padding: 0 16px;
   border-radius: 4px;
-  background-color: #3b9eff;
+  background-color: #f36;
   color: #fff;
   font-weight: bold;
   user-select: none;
 
   &:hover,
   &:focus {
-    background-color: ${darken(0.025, '#3b9eff')};
+    background-color: ${darken(0.025, '#f36')};
   }
 
   &:active {
-    background-color: ${darken(0.05, '#3b9eff')};
+    background-color: ${darken(0.05, '#f36')};
   }
 
   ${props =>
@@ -31,7 +31,7 @@ const Button = styled.button`
       &:hover,
       &:focus,
       &:active {
-        background-color: #3b9eff;
+        background-color: #f36;
       }
     `}
 `;

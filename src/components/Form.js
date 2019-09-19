@@ -15,7 +15,7 @@ const StyledForm = styled(Form)`
     align-self: flex-start;
     margin-top: -8px;
     margin-bottom: 16px;
-    color: #f64c75;
+    color: #e73737;
   }
 
   ${props =>

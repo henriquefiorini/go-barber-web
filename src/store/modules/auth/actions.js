@@ -1,4 +1,9 @@
-import { SIGN_IN_REQUEST, SIGN_IN_SUCCESS, AUTH_FAILURE } from './actionTypes';
+import {
+  SIGN_IN_REQUEST,
+  SIGN_IN_SUCCESS,
+  AUTH_FAILURE,
+  SIGN_UP_REQUEST,
+} from './actionTypes';
 
 export function signInRequest(email, password) {
   return {
@@ -16,6 +21,17 @@ export function signInSuccess(token, user) {
     payload: {
       token,
       user,
+    },
+  };
+}
+
+export function signUpRequest(name, email, password) {
+  return {
+    type: SIGN_UP_REQUEST,
+    payload: {
+      name,
+      email,
+      password,
     },
   };
 }

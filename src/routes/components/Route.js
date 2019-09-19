@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
 
+import { Store } from '~/store';
+
 import { AuthLayout, DefaultLayout } from '~/pages/_layouts';
 
 function RouteWrapper({ component: Component, isPrivate, ...rest }) {
-  const isAuthenticated = false;
+  const { isAuthenticated } = Store.getState().auth;
 
   if (!isAuthenticated && isPrivate) {
     return <Redirect to="/" />;

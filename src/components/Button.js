@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { darken } from 'polished';
 
 const Button = styled.button`
@@ -21,6 +21,19 @@ const Button = styled.button`
   &:active {
     background-color: ${darken(0.05, '#3b9eff')};
   }
+
+  ${props =>
+    props.disabled &&
+    css`
+      opacity: 0.6;
+      cursor: default;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: #3b9eff;
+      }
+    `}
 `;
 
 export default Button;

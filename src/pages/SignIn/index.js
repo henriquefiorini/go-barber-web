@@ -1,8 +1,11 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import * as Yup from 'yup';
 
 import { Form, Input, Button } from '~/components';
+
+import { signInRequest } from '~/store/modules/auth/actions';
 
 const schema = Yup.object().shape({
   email: Yup.string()
@@ -12,8 +15,11 @@ const schema = Yup.object().shape({
 });
 
 function SignIn() {
-  function handleSubmit(data) {
-    console.tron.log(data);
+  const dispatch = useDispatch();
+  const isLoading = useSelector(state => state.auth.isLoading);
+
+  function handleSubmit({ email, password }) {
+    dispatch(signInRequest(email, password));
   }
 
   return (
@@ -21,7 +27,9 @@ function SignIn() {
       <Form schema={schema} onSubmit={handleSubmit}>
         <Input name="email" type="email" placeholder="Email" />
         <Input name="password" type="password" placeholder="Password" />
-        <Button type="submit">Sign In</Button>
+        <Button type="submit" disabled={isLoading}>
+          {isLoading ? 'Connecting...' : 'Sign In'}
+        </Button>
       </Form>
       <Link to="/register">Create an account</Link>
     </>

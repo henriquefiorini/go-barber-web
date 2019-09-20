@@ -32,6 +32,7 @@ module.exports = {
 
     'no-param-reassign': 'off',
     'no-console': ['error', { allow: ['tron'] }],
+    'no-underscore-dangle': ['error', { allow: ['_id'] }],
   },
   settings: {
     'import/resolver': {

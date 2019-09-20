@@ -1,10 +1,12 @@
 import React from 'react';
 
+import { Notifications } from '~/components';
+
 import {
   Container,
   Group,
+  Item,
   Logo,
-  Navigation,
   NavLink,
   Profile,
   Avatar,
@@ -14,18 +16,25 @@ export default function Header() {
   return (
     <Container>
       <Group>
-        <Logo />
-        <Navigation>
+        <Item>
+          <Logo />
+        </Item>
+        <Item>
           <NavLink to="/dashboard">Dashboard</NavLink>
-        </Navigation>
+        </Item>
       </Group>
       <Group>
-        <Profile to="/profile">
-          <Avatar
-            src="https://api.adorable.io/avatars/40/abott@adorable.png"
-            alt=""
-          />
-        </Profile>
+        <Item>
+          <Notifications />
+        </Item>
+        <Item>
+          <Profile to="/profile">
+            <Avatar
+              src="https://api.adorable.io/avatars/40/abott@adorable.png"
+              alt=""
+            />
+          </Profile>
+        </Item>
       </Group>
     </Container>
   );

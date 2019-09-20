@@ -1,9 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
 import 'react-toastify/dist/ReactToastify.css';
+import 'react-perfect-scrollbar/dist/css/styles.css';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 
   *,
   *::before,
@@ -25,7 +26,7 @@ export default createGlobalStyle`
   body {
     background-color: white;
     color: black;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: normal;
     line-height: 1.5;

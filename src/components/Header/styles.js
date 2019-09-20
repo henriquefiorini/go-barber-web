@@ -8,7 +8,7 @@ export const Container = styled.div`
   justify-content: space-between;
   height: 64px;
   padding: 0 24px;
-  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #eee;
 `;
 
 export const Group = styled.div`
@@ -16,23 +16,24 @@ export const Group = styled.div`
   align-items: center;
 `;
 
+export const Item = styled.div`
+  display: flex;
+  align-items: center;
+
+  &:not(:first-child) {
+    margin-left: 24px;
+  }
+`;
+
 export const Logo = styled(MdSpa).attrs({
   size: 32,
   color: 'black',
 })`
-  margin-right: 16px;
   line-height: 1;
 `;
 
-export const Navigation = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 export const NavLink = styled(Link)`
-  margin: 16px;
   color: black;
-  font-weight: 600;
   line-height: 1;
   transition: color 0.2s ease-in-out;
 

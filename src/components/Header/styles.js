@@ -54,3 +54,16 @@ export const Avatar = styled.img`
   width: 32px;
   border-radius: 16px;
 `;
+
+export const Name = styled.span`
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: black;
+  }
+`;

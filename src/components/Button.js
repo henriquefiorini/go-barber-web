@@ -34,6 +34,22 @@ const Button = styled.button`
         background-color: #f36;
       }
     `}
+
+  ${props =>
+    props.secondary &&
+    css`
+      background-color: #eee;
+      color: black;
+
+      &:hover,
+      &:focus {
+        background-color: ${darken(0.025, '#eee')};
+      }
+
+      &:active {
+        background-color: ${darken(0.05, '#eee')};
+      }
+    `}
 `;
 
 export default Button;

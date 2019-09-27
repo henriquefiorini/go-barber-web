@@ -53,6 +53,7 @@ export const Avatar = styled.img`
   height: 32px;
   width: 32px;
   border-radius: 16px;
+  background-color: #eee;
 `;
 
 export const Name = styled.span`

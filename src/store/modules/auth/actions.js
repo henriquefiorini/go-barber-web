@@ -3,6 +3,7 @@ import {
   SIGN_IN_SUCCESS,
   AUTH_FAILURE,
   SIGN_UP_REQUEST,
+  SIGN_OUT,
 } from './actionTypes';
 
 export function signInRequest(email, password) {
@@ -39,5 +40,11 @@ export function signUpRequest(name, email, password) {
 export function authFailure() {
   return {
     type: AUTH_FAILURE,
+  };
+}
+
+export function signOut() {
+  return {
+    type: SIGN_OUT,
   };
 }

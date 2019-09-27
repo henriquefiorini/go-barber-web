@@ -5,6 +5,8 @@ import { Container } from './styles';
 import AvatarInput from './components/AvatarInput';
 
 import { Form, Input, Button } from '~/components';
+
+import { signOut } from '~/store/modules/auth/actions';
 import { updateProfileRequest } from '~/store/modules/user/actions';
 
 export default function Profile() {
@@ -13,6 +15,10 @@ export default function Profile() {
 
   function handleSubmit(data) {
     dispatch(updateProfileRequest(data));
+  }
+
+  function handleSignOut() {
+    dispatch(signOut());
   }
 
   return (
@@ -40,7 +46,7 @@ export default function Profile() {
         />
         <Button type="submit">Update Profile</Button>
       </Form>
-      <Button secondary type="button">
+      <Button secondary type="button" onClick={handleSignOut}>
         Sign Out
       </Button>
     </Container>

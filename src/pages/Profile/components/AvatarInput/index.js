@@ -38,10 +38,10 @@ export default function AvatarInput() {
     <Container>
       <label htmlFor="avatar">
         <img
+          alt=""
           src={
             preview || 'https://api.adorable.io/avatars/40/abott@adorable.png'
           }
-          alt="Update profile avatar"
         />
         <input
           id="avatar"

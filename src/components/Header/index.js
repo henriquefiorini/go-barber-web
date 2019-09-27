@@ -34,11 +34,11 @@ export default function Header() {
         <Item>
           <Profile to="/profile">
             <Avatar
+              alt=""
               src={
                 (profile.avatar && profile.avatar.url) ||
                 'https://api.adorable.io/avatars/40/abott@adorable.png'
               }
-              alt={profile.name}
             />
             <Name>{profile.name}</Name>
           </Profile>

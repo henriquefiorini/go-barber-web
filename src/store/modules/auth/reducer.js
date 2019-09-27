@@ -5,6 +5,7 @@ import {
   SIGN_IN_SUCCESS,
   AUTH_FAILURE,
   SIGN_UP_REQUEST,
+  SIGN_OUT,
 } from './actionTypes';
 
 const initialState = {
@@ -38,6 +39,13 @@ export default function auth(state = initialState, action) {
       }
 
       case AUTH_FAILURE: {
+        draft.token = null;
+        draft.isAuthenticated = false;
+        draft.isLoading = false;
+        break;
+      }
+
+      case SIGN_OUT: {
         draft.token = null;
         draft.isAuthenticated = false;
         draft.isLoading = false;

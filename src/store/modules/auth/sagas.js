@@ -1,7 +1,7 @@
 import { call, put, all, takeLatest } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
 
-import { SIGN_IN_REQUEST, SIGN_UP_REQUEST } from './actionTypes';
+import { SIGN_IN_REQUEST, SIGN_UP_REQUEST, SIGN_OUT } from './actionTypes';
 import { signInSuccess, authFailure } from './actions';
 
 import api from '~/services/api';
@@ -60,8 +60,13 @@ export function* signUp({ payload }) {
   }
 }
 
+export function signOut() {
+  history.push('/');
+}
+
 export default all([
   takeLatest('persist/REHYDRATE', setAuthorizationHeader),
   takeLatest(SIGN_IN_REQUEST, signIn),
   takeLatest(SIGN_UP_REQUEST, signUp),
+  takeLatest(SIGN_OUT, signOut),
 ]);
